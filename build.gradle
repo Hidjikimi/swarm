@@ -8,14 +8,6 @@ group = 'ua.com.iasoft'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'ua.com.iasoft.swarm.SwarmApplication'
-        )
-    }
-}
-
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -38,3 +30,11 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar {
+    enabled = false
+}
+
+task stage(
+        dependsOn: build
+)
