@@ -1,1 +1,1 @@
-java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
+java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/swarm-0.0.1-SNAPSHOT.jar
